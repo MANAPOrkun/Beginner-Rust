@@ -18,26 +18,25 @@ fn main() {
 
     let result = is_divisible(number);
 
-    if result {
-        println!("WOW");
-    } else{
-        println!("Meh.");
-    }
+    // Return values must be same
+    let im_just_testing = if result { "WOW!" } else { "meh." };
+    
+    println!("{}", im_just_testing);
 }
 
 fn is_divisible(x: u32) -> bool{
 
     if x % 3 == 0 && x % 2 == 0{
-        println!("number is divisible by 3 and 2");
+        print!("{}", "number is divisible by 3 and 2 ".replace('\n', " "));
         return true;
     } else if x % 3 == 0 {
-        println!("number is divisible by 3");
+        print!("{}", "number is divisible by 3 ".replace('\n', " "));
         return false;
     } else if x % 2 == 0 {
-        println!("number is divisible by 2");
+        print!("{}", "number is divisible by 2 ".replace('\n', " "));
         return false;
     } else {
-        println!("nope");
+        print!("{}", "nope ".replace('\n', " "));
         return false;
     }
 }
