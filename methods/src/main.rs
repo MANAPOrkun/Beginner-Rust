@@ -5,6 +5,13 @@ struct Rectangle {
 }
 
 // Implementation block
+
+/*
+ Note that we still need to use the & before self,
+ just as we did in &Rectangle. Methods can take ownership of self,
+ borrow self immutably as we’ve done here, or borrow self mutably,
+ just as they can any other parameter.
+*/
 impl Rectangle {
     fn area(&self) -> u32 {
         self.width * self.height
